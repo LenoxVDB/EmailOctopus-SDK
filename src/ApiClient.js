@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import axios from "axios";
 import Automation from "./modules/Automation.js";
 import Campaign from "./modules/Campaign.js";
+import Tag from "./modules/Tag.js";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ export default class ApiClient {
      */
     automation
     campaign
+    tag
 
     constructor() {
         if (!process.env.EMAIL_OCTOPUS_API_KEY) {
@@ -52,5 +54,6 @@ export default class ApiClient {
     registerModules() {
         this.automation = new Automation(this)
         this.campaign = new Campaign(this)
+        this.tag = new Tag(this)
     }
 }
