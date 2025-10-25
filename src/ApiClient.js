@@ -1,14 +1,16 @@
 import dotenv from "dotenv";
 import axios from "axios";
 import Automation from "./modules/Automation.js";
+import Campaign from "./modules/Campaign.js";
 
 dotenv.config();
 
 export default class ApiClient {
     /**
-     * Public attributes
+     * modules
      */
     automation
+    campaign
 
     constructor() {
         if (!process.env.EMAIL_OCTOPUS_API_KEY) {
@@ -23,12 +25,13 @@ export default class ApiClient {
      * Core method that handles all HTTP requests to the API.
      * Provides a centralized way to make authenticated API calls with proper headers and error handling.
      */
-    async baseRequest(url, method = 'GET', data = null) {
+    async baseRequest(url, {method = 'GET', data, params} = {}) {
         try {
             const response = await axios({
                 method,
                 url: `https://api.emailoctopus.com/${url}`,
-                data: data ?? undefined,
+                data: method.toUpperCase() !== 'GET' ? (data ?? undefined) : undefined,
+                params: params ?? undefined,
                 headers: {
                     Accept: 'application/json',
                     'Content-Type': 'application/json',
@@ -48,5 +51,6 @@ export default class ApiClient {
      */
     registerModules() {
         this.automation = new Automation(this)
+        this.campaign = new Campaign(this)
     }
 }

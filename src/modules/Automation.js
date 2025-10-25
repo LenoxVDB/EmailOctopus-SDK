@@ -12,6 +12,9 @@ export default class Automation {
      * @param contactId The ID of the contact, or an MD5 hash of the lowercase version of the contact's email address.
      */
     async start(automationId, contactId) {
-        return await this.ApiClient.baseRequest(`automations/${automationId}/queue`, 'POST', {contactId})
+        return await this.ApiClient.baseRequest(`automations/${automationId}/queue`, {
+            method: 'POST',
+            data: {contactId}
+        })
     }
 }
