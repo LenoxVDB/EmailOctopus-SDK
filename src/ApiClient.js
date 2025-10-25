@@ -4,6 +4,7 @@ import Automation from "./modules/Automation.js";
 import Campaign from "./modules/Campaign.js";
 import Tag from "./modules/Tag.js";
 import List from "./modules/List.js";
+import Field from "./modules/Field.js";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ export default class ApiClient {
     campaign
     tag
     list
+    field
 
     constructor() {
         if (!process.env.EMAIL_OCTOPUS_API_KEY) {
@@ -58,5 +60,6 @@ export default class ApiClient {
         this.campaign = new Campaign(this)
         this.tag = new Tag(this)
         this.list = new List(this)
+        this.field = new Field(this)
     }
 }
