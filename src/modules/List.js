@@ -59,7 +59,7 @@ export default class List {
      * @returns {Promise} API response
      */
     async delete(listId) {
-        return this.ApiClient.baseRequest(`lists/${listId}`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}`, {
             method: 'DELETE'
         })
     }

@@ -13,7 +13,7 @@ export default class Field {
      * @returns {Promise<*>}
      */
     async create(listId, label, tag, type, fallback) {
-        return this.ApiClient.baseRequest(`lists/${listId}/fields`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}/fields`, {
             method: 'POST',
             data: {
                 "label": label,
@@ -35,7 +35,7 @@ export default class Field {
      * @returns {Promise<*>}
      */
     async createChoiceField(listId, label, tag, type, choices = [], fallback) {
-        return this.ApiClient.baseRequest(`lists/${listId}/fields`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}/fields`, {
             method: 'POST',
             data: {
                 "label": label,
@@ -57,7 +57,7 @@ export default class Field {
      * @returns {Promise<*>}
      */
     async update(listId, tag, label, type, fallback) {
-        return this.ApiClient.baseRequest(`lists/${listId}/fields/${tag}`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}/fields/${tag}`, {
             method: 'PUT',
             data: {
                 "label": label,
@@ -75,7 +75,7 @@ export default class Field {
      * @returns {Promise<*>}
      */
     async delete(listId, tag) {
-        return this.ApiClient.baseRequest(`lists/${listId}/fields/${tag}`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}/fields/${tag}`, {
             method: "DELETE"
         })
     }

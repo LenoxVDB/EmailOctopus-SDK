@@ -22,7 +22,7 @@ export default class Tag {
      * @returns {Promise} Response from the API
      */
     async create(listId, tagName) {
-        return this.ApiClient.baseRequest(`lists/${listId}/tags`, {
+        return await this.ApiClient.baseRequest(`lists/${listId}/tags`, {
             method: 'POST',
             data: {"tag": tagName}
         })
