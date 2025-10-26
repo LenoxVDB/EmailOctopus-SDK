@@ -1,5 +1,5 @@
 {
-  "name": "emailoctopus-sdk",
+  "name": "Emailoctopus-sdk",
   "version": "1.0.0",
   "description": "A simple Node.js SDK for the EmailOctopus API. Manage subscribers, lists, and campaigns with ease.",
   "keywords": [
