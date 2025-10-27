@@ -1,4 +1,5 @@
-# EmailOctopus SDK (Node.js)
+# Disclaimer: This package was built for learning purposes and is not actively maintained.
+## EmailOctopus SDK (Node.js)
 
 A modern, lightweight Node.js SDK for the EmailOctopus API — send, manage, and automate email campaigns with ease.
 
