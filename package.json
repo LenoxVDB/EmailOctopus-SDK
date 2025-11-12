@@ -1,0 +1,28 @@
+{
+  "name": "emailoctopus-sdk",
+  "version": "1.0.0",
+  "description": "A simple Node.js SDK for the EmailOctopus API. Manage subscribers, lists, and campaigns with ease.",
+  "keywords": [
+    "api",
+    "sdk"
+  ],
+  "homepage": "https://github.com/LenoxVDB/EmailOctopus-SDK#readme",
+  "bugs": {
+    "url": "https://github.com/LenoxVDB/EmailOctopus-SDK/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LenoxVDB/EmailOctopus-SDK.git"
+  },
+  "license": "MIT",
+  "author": "Lenox Van den Berg",
+  "type": "module",
+  "main": "src/ApiClient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3"
+  }
+}
