@@ -1,4 +1,5 @@
 # EmailOctopus SDK (Node.js)
+## Disclamer: This package is intended for learning purposes only and will only be maintained if issues are reported.
 
 A modern, lightweight Node.js SDK for the EmailOctopus API — send, manage, and automate email campaigns with ease.
 
@@ -218,3 +219,4 @@ Many list endpoints support `limit` and `starting_after`. Use `starting_after` w
 
 ## License
 MIT © Lenox Van den Berg
+
