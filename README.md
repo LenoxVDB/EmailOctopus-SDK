@@ -1,4 +1,8 @@
-# EmailOctopus SDK (Node.js)
+<div align="center">
+
+  # EmailOctopus SDK (Node.js)
+
+</div>
 
 <div align="center">
   
@@ -227,5 +231,6 @@ Many list endpoints support `limit` and `starting_after`. Use `starting_after` w
 
 ## License
 MIT © Lenox Van den Berg
+
 
 
